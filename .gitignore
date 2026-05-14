@@ -1,6 +1,8 @@
 build/
+dist/
+.venv/
 .DS_Store
 *.zip
 *.pyc
 __pycache__/
-
+*.spec

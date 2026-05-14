@@ -1,6 +1,6 @@
 # Gamma Screen Pet
 
-Gamma is a tiny floating macOS screen pet built with Swift and AppKit. She lives above your desktop, can be dragged around, and switches between small animated states such as idle walking, waving, jumping, napping, working, reviewing, and oops.
+Gamma is a tiny floating desktop pet. She lives above your desktop, can be dragged around, and switches between small animated states such as idle walking, waving, jumping, napping, working, reviewing, and oops.
 
 ## Features
 
@@ -13,7 +13,11 @@ Gamma is a tiny floating macOS screen pet built with Swift and AppKit. She lives
 - Idle mode patrols left and right
 - Keyboard shortcuts for quick actions
 
-## Requirements
+## macOS Version
+
+The macOS version is built with Swift and AppKit.
+
+### Requirements
 
 - macOS 12 or later
 - Xcode command line tools with `swiftc`
@@ -24,7 +28,7 @@ Install the command line tools if needed:
 xcode-select --install
 ```
 
-## Build
+### Build
 
 ```bash
 ./build.sh
@@ -36,11 +40,46 @@ The app will be created at:
 build/Gamma.app
 ```
 
-## Run
+### Run
 
 ```bash
 open build/Gamma.app
 ```
+
+## Windows Version
+
+The Windows version is built with Python, Tkinter, and Pillow. It uses the same bundled Gamma frame assets.
+
+### Requirements
+
+- Windows 10 or later
+- Python 3.10 or later
+
+### Run
+
+Double-click:
+
+```text
+run_windows.bat
+```
+
+Or run from PowerShell / Command Prompt:
+
+```bat
+python -m pip install -r requirements-windows.txt
+python Windows\gamma_pet_windows.py
+```
+
+### Optional EXE Build
+
+You can package the Windows version with PyInstaller:
+
+```bat
+python -m pip install pyinstaller -r requirements-windows.txt
+pyinstaller --noconsole --onefile --add-data "Assets;Assets" Windows\gamma_pet_windows.py
+```
+
+The generated executable will be under `dist\`.
 
 ## Controls
 
@@ -57,4 +96,3 @@ open build/Gamma.app
 ## Notes
 
 This is an early standalone MVP. The current app uses bundled PNG frame assets and a simple AppKit window; it does not require an API key or internet connection to run.
-
