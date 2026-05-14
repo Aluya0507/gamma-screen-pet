@@ -1,6 +1,6 @@
 # Gamma Screen Pet
 
-Gamma is a tiny floating desktop pet. She lives above your desktop, can be dragged around, and switches between small animated states such as idle walking, waving, jumping, napping, working, reviewing, and oops.
+Gamma is a tiny floating desktop pet. He lives above your desktop, can be dragged around, and switches between small animated states such as idle walking, waving, jumping, napping, working, reviewing, and oops.
 
 ## Features
 
